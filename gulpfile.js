@@ -45,10 +45,10 @@ const configServer = {
   server: {
     baseDir: "./build"
   },
-  tunnel: true,   // ВКЛ\ВЫКЛ  временный адрес для просмотра вне локальной сети
+  tunnel: false,   // ВКЛ\ВЫКЛ  временный адрес для просмотра вне локальной сети
   host: 'localhost',
   port: 9000,
-  logPrefix: "BrainGAMES"
+  logPrefix: "LOCAL"
 };
 
 gulp.task('locale', function () {           // Web server port: 9000

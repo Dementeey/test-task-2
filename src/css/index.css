@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 600px;
+  height: 600px;
+  margin: 50px auto 0;
+
+  border: 1px solid rgba(190,190,190, 0.3);
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 rgba(190,190,190, 0.3);
+}
+
+.graph {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+}
+
+.y,
+.x {
+  position: absolute;
+
+  background-color: #262626;
+}
+
+.y {
+  top: 35px;
+  left: 35px;
+
+  width: 2px;
+  height: 90%;
+}
+
+.x {
+  bottom: 40px;
+  left: 20px;
+
+  width: 90%;
+  height: 2px;
+}
+
+.x ul {
+  display: flex;
+  margin: 0;
+  margin-top: 5px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.x ul li:first-child {
+  margin-right: 18px;
+  margin-left: 0;
+}
+
+.x ul li {
+  position: relative;
+  width: 25px;
+  margin-left: 5px;
+}
+
+.x ul li .block {
+  position: absolute;
+  width: 20px;
+  height: calc(15 * 26px);
+  background-color: red;
+  bottom: 23px;
+  left: -6px;
+}
+
+.x::after {
+  content: "";
+  position: absolute;
+  top: -7px;
+  right: -16px;
+
+  border: 8px solid transparent;
+  border-left: 8px solid #000000;
+}
+
+.y::after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -7px;
+
+  border: 8px solid transparent;
+  border-bottom: 8px solid #000000;
+}
+
+.y ul {
+  position: absolute;
+  left: -20px;
+  top: -6px;
+
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.y ul li {
+  position: relative;
+
+  margin-bottom: 8px;
+  padding-right: 8px;
+}
+
+.y ul li:first-child {
+  margin-bottom: 25px;
+}
+
+.y ul li::after {
+  content: "";
+  position: absolute;
+  top: .5em;
+  width: 13px;
+  height: 1px;
+  background-color: #000000;
+}
+
+
